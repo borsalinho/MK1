@@ -8,6 +8,8 @@ import android.widget.EditText
 import android.widget.TextView
 import com.example.mk1.R
 import com.example.mk1.data.repository.UserRepositoryImpl
+import com.example.mk1.data.storage.SharedPrefUserStorage
+import com.example.mk1.data.storage.UserStorage
 import com.example.mk1.domain.models.SaveUserName
 import com.example.mk1.domain.models.UserName
 import com.example.mk1.domain.usecase.GetUserNameUseCase
@@ -16,8 +18,11 @@ import com.example.mk1.domain.usecase.SaveUserNameUseCase
 class MainActivity : AppCompatActivity() {
 
     // инициализация usecase'ов
+    private val userStorage by lazy(LazyThreadSafetyMode.NONE) {
+        SharedPrefUserStorage(context = applicationContext)
+    }
     private val userRepository by lazy(LazyThreadSafetyMode.NONE) {
-        UserRepositoryImpl(context = applicationContext)
+        UserRepositoryImpl(userStorage = userStorage)
     }
     private val getUserNameUseCase  by lazy(LazyThreadSafetyMode.NONE) {
         GetUserNameUseCase(userRepository = userRepository)

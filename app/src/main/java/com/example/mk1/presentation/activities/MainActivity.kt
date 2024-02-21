@@ -7,20 +7,17 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.mk1.R
-import com.example.data.repository.UserRepositoryImpl
-import com.example.data.storage.SharedPrefUserStorage
-import com.example.data.storage.UserStorage
-import com.example.domain.models.SaveUserName
-import com.example.domain.models.UserName
-import com.example.domain.usecase.GetUserNameUseCase
-import com.example.domain.usecase.SaveUserNameUseCase
+import com.example.mk1.app.App
 import com.example.mk1.presentation.MainViewModelFactory
 import com.example.mk1.presentation.viewmodel.MainViewModel
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
+
+    @Inject
+    lateinit var viewModelFactory: MainViewModelFactory
 
     private lateinit var viewModel: MainViewModel
 
@@ -28,9 +25,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        (applicationContext as App).appComponent.inject(this)
+
         Log.e("AAA", "Activity created")
 
-        viewModel = ViewModelProvider(this, MainViewModelFactory(this))
+        viewModel = ViewModelProvider(this, viewModelFactory)
             .get(MainViewModel::class.java)
 
 

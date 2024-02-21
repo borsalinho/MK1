@@ -1,10 +1,10 @@
-package com.example.mk1.data.repository
+package com.example.data.repository
 
-import com.example.mk1.data.storage.models.User
-import com.example.mk1.data.storage.UserStorage
-import com.example.mk1.domain.models.SaveUserName
-import com.example.mk1.domain.models.UserName
-import com.example.mk1.domain.repository.UserRepository
+import com.example.data.storage.models.User
+import com.example.data.storage.UserStorage
+import com.example.domain.models.SaveUserName
+import com.example.domain.models.UserName
+import com.example.domain.repository.UserRepository
 
 
 

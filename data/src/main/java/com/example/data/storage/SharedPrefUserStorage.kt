@@ -1,7 +1,7 @@
-package com.example.mk1.data.storage
+package com.example.data.storage
 
 import android.content.Context
-import com.example.mk1.data.storage.models.User
+import com.example.data.storage.models.User
 
 private const val SHARED_PREFS_NAME = "shared_prefs_name"
 private const val KEY_FIRST_NAME = "firstName"
@@ -20,7 +20,7 @@ class SharedPrefUserStorage(context: Context) : UserStorage {
     }
 
     override fun get(): User {
-        val firstName = sharedPreferences.getString(KEY_FIRST_NAME,DEFAULT_FIRST_NAME) ?: DEFAULT_FIRST_NAME
+        val firstName = sharedPreferences.getString(KEY_FIRST_NAME, DEFAULT_FIRST_NAME) ?: DEFAULT_FIRST_NAME
         val lastName = sharedPreferences.getString(KEY_LAST_NAME, DEFAULT_LAST_NAME) ?: DEFAULT_LAST_NAME
 
         return User(firstName = firstName, lastName = lastName)

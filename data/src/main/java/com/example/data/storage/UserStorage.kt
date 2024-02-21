@@ -1,6 +1,6 @@
-package com.example.mk1.data.storage
+package com.example.data.storage
 
-import com.example.mk1.data.storage.models.User
+import com.example.data.storage.models.User
 
 
 interface UserStorage {

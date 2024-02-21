@@ -1,3 +1,3 @@
-package com.example.mk1.data.storage.models
+package com.example.data.storage.models
 
 class User(val firstName: String, val lastName: String)

@@ -1,6 +1,7 @@
 package com.example.mk1.presentation.activities
 
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var viewModel: MainViewModel
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -33,6 +35,26 @@ class MainActivity : AppCompatActivity() {
             .get(MainViewModel::class.java)
 
 
+
+
+
+
+
+
+        val btnRes = findViewById<Button>(R.id.btnGet)
+        btnRes.setOnClickListener{
+
+        }
+
+
+
+
+
+
+
+
+
+        /// ----------------------------------------------------
         var dataTextEdit = findViewById<EditText>(R.id.editTextSetData)
         var dataTextView = findViewById<TextView>(R.id.textView)
         val sendButton = findViewById<Button>(R.id.btnSetData)

@@ -1,13 +1,7 @@
-package com.example.data.storage.models
+package com.example.domain.models
 
-import androidx.room.Entity
-import androidx.room.Ignore
-import androidx.room.PrimaryKey
-
-@Entity(tableName = "products")
-data class ProductEntity (
-    @PrimaryKey(autoGenerate = true)
-    val id : Int = 0,
+data class Product(
+    val id : Int,
     val title: String,
     val description: String,
     val price: Int,
@@ -18,4 +12,4 @@ data class ProductEntity (
     val category: String,
     val thumbnail: String,
     val images: List<String>
-    )
+)

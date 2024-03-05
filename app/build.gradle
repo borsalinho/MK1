@@ -62,9 +62,9 @@ dependencies {
 
 
 
-    //OkHttp
-    implementation("com.squareup.okhttp3:okhttp:4.7.2")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.7.2")
+//    //OkHttp
+//    implementation("com.squareup.okhttp3:okhttp:4.7.2")
+//    implementation("com.squareup.okhttp3:logging-interceptor:4.7.2")
 
     //dagger
     def dagger_version = "2.45"

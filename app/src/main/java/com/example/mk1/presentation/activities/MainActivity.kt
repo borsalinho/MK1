@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 
         val btnRes = findViewById<Button>(R.id.btnGet)
         btnRes.setOnClickListener{
-
+            viewModel.loadFromServer()
         }
 
 

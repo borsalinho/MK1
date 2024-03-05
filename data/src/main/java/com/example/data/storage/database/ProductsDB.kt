@@ -22,6 +22,7 @@ abstract class ProductsDB: RoomDatabase() {
                 "products.db"
             ).build()
         }
+
     }
 }
 

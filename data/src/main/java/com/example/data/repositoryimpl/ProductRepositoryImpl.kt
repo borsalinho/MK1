@@ -31,6 +31,7 @@ class ProductRepositoryImpl : ProductRepository {
 //    val db = ProductsDB.getDataBase()
 
     override fun getProducts(): Products {
-        val productApi = retrofit.create(ApiResultDto::class.java)
+//        val productApi = retrofit.create(ApiResultDto::class.java)
+        TODO()
     }
 }

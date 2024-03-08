@@ -2,10 +2,12 @@ package com.example.mk1.di
 
 import android.content.Context
 import com.example.data.network.ProductsDtoApi
+import com.example.data.repositoryimpl.ProductsRepositoryImpl
 import com.example.data.repositoryimpl.UserRepositoryImpl
 import com.example.data.storage.UserStorage
 import com.example.data.storage.database.ProductsDB
 import com.example.data.storage.implementations.SharedPrefUserStorage
+import com.example.domain.repository.ProductsRepository
 import com.example.domain.repository.UserRepository
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -59,6 +61,7 @@ class DataModule {
         .build()
     }
 
+    // создание экземпляра, который реализует интерфейс DTO
     @Provides
     @Singleton
     fun provideProductApi(retrofit: Retrofit) : ProductsDtoApi{
@@ -70,6 +73,14 @@ class DataModule {
     @Singleton
     fun provideProductDB(context: Context) : ProductsDB {
         return ProductsDB.getDataBase(context)
+    }
+
+
+    // ------------------repositoryimpl-------------------
+
+    @Provides
+    fun provideProductsRepositoryImpl(): ProductsRepository {
+        return ProductsRepositoryImpl()
     }
 
 

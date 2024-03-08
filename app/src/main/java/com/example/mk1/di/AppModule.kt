@@ -2,6 +2,7 @@ package com.example.mk1.di
 
 import android.content.Context
 import com.example.domain.usecase.GetUserNameUseCase
+import com.example.domain.usecase.LoadProductsFromApiUseCase
 import com.example.domain.usecase.SaveUserNameUseCase
 import com.example.mk1.presentation.MainViewModelFactory
 import dagger.Module
@@ -18,11 +19,13 @@ class AppModule(val context: Context) {
     @Provides
     fun provideMainViewModelFactory(
         getUserNameUseCase: GetUserNameUseCase,
-        saveUserNameUseCase: SaveUserNameUseCase
+        saveUserNameUseCase: SaveUserNameUseCase,
+        loadProductsFromApiUseCase: LoadProductsFromApiUseCase
     ) : MainViewModelFactory{
         return MainViewModelFactory(
             getUserNameUseCase = getUserNameUseCase,
-            saveUserNameUseCase = saveUserNameUseCase
+            saveUserNameUseCase = saveUserNameUseCase,
+            loadProductsFromApiUseCase = loadProductsFromApiUseCase
         )
     }
 

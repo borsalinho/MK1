@@ -1,8 +1,11 @@
 package com.example.domain.usecase
 
-class LoadProductsFromApiUseCase {
+import com.example.domain.models.Products
+import com.example.domain.repository.ProductsRepository
 
-    fun execute(){
+class LoadProductsFromApiUseCase(private val productsRepository: ProductsRepository) {
 
+    fun execute() : Products{
+        return productsRepository.getProducts()
     }
 }

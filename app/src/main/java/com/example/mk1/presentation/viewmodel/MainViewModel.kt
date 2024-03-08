@@ -8,20 +8,24 @@ import com.example.domain.models.Products
 import com.example.domain.models.SaveUserName
 import com.example.domain.models.UserName
 import com.example.domain.usecase.GetUserNameUseCase
+import com.example.domain.usecase.LoadProductsFromApiUseCase
 import com.example.domain.usecase.SaveUserNameUseCase
 
 class MainViewModel(
     private val getUserNameUseCase: GetUserNameUseCase,
-    private val saveUserNameUseCase: SaveUserNameUseCase
+    private val saveUserNameUseCase: SaveUserNameUseCase,
+    private val loadProductsFromApiUseCase: LoadProductsFromApiUseCase
     ) : ViewModel() {
 
 
-    private var listResultLiveMutable = MutableLiveData<Products>()
-    private var textResultLiveMutable = MutableLiveData<String>()
-    val resultText: LiveData<String> = textResultLiveMutable
+//    private var listResultLiveMutable = MutableLiveData<Products>()
 
 
-    //-------------------------------------------------------
+//    private var textResultLiveMutable = MutableLiveData<String>()
+//    val resultText: LiveData<String> = textResultLiveMutable
+
+
+    //-----------------------test--------------------------------
     private var resultLiveMutable = MutableLiveData<String>()
     val resultLive: LiveData<String> = resultLiveMutable
 
@@ -38,9 +42,7 @@ class MainViewModel(
 
 
     fun loadFromServer(){
-
-//        val products
-//        listResultLiveMutable.value
+        loadProductsFromApiUseCase.execute()
     }
 
 
@@ -50,7 +52,7 @@ class MainViewModel(
 
 
 
-    //-----------------------------------------------------------
+    //-------------------------test----------------------------------
 
     fun save(text: String){
         val params = SaveUserName(name = text)

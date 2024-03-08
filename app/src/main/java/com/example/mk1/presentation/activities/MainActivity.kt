@@ -37,11 +37,14 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
-
-
-
+        var productsTextView = findViewById<TextView>(R.id.textRes)
         val btnRes = findViewById<Button>(R.id.btnGet)
+
+//        viewModel.resultText.observe(this) { text ->
+//            productsTextView.text = text
+//        }
+
+        //после нажатия проверь ДБ, должен появится, пока что не надо выводить на экран
         btnRes.setOnClickListener{
             viewModel.loadFromServer()
         }

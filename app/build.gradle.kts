@@ -34,11 +34,15 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
 
     implementation(project(":domain"))
+    implementation(project(":data")) // для даггера
 
     // Room
     implementation("androidx.room:room-runtime:2.4.3")

@@ -17,4 +17,3 @@ rootProject.name = "mk1"
 include(":app")
 include(":data")
 include(":domain")
-include(":di")

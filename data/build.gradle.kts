@@ -42,11 +42,14 @@ dependencies {
     //Gson
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
-
+    // Room
+    implementation("androidx.room:room-runtime:2.4.3")
+    kapt("androidx.room:room-compiler:2.4.3")
+    implementation("androidx.room:room-ktx:2.4.3")
 
     // Dagger
-    implementation("com.google.dagger:dagger:2.40.5")
-    kapt("com.google.dagger:dagger-compiler:2.40.5")
+    implementation("com.google.dagger:dagger:2.45")
+    kapt("com.google.dagger:dagger-compiler:2.45")
 
     implementation("androidx.core:core-ktx:1.8.0")
     implementation("androidx.appcompat:appcompat:1.4.2")

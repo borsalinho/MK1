@@ -3,7 +3,6 @@ package com.S21.mk1.presentation.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.S21.mk1.R
 import com.S21.mk1.databinding.ActivityMainBinding
 import com.S21.mk1.myapp.MyApp
 import com.S21.mk1.presentation.viewmodels.MainViewModel
@@ -23,8 +22,7 @@ class MainActivity : AppCompatActivity() {
         val btnGetData = binding.btnGetData
 
         btnGetData.setOnClickListener {
-            Log.e("MyLogs", "i am btnGetData")
-            mainViewModel.getData()
+            mainViewModel.getProducts()
         }
 
     }

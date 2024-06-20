@@ -1,5 +1,6 @@
 package com.S21.mk1.di
 
+import android.content.Context
 import com.s21.data.implementations.DataRepositoryImpl
 import com.s21.data.implementations.NetworkRepositoryImpl
 import com.s21.domain.repository.DataRepository
@@ -18,8 +19,8 @@ class DomainModule {
     }
 
     @Provides
-    fun provideDataRepositoryImpl() : DataRepository {
-        return DataRepositoryImpl()
+    fun provideDataRepositoryImpl(context : Context) : DataRepository {
+        return DataRepositoryImpl(context = context)
     }
 
     @Provides

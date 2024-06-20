@@ -20,7 +20,7 @@ class NetworkRepositoryImpl() : NetworkRepository {
 
     private val productsApi = retrofit.create(ProductsApi::class.java)
 
-    override suspend fun getDataFromApi() : Products {
+    override suspend fun getProductsFromApi() : Products {
         return productsApi.getProducts().toProducts()
     }
 }

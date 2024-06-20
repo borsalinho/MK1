@@ -36,12 +36,13 @@ android {
 dependencies {
 
     // Dagger
-    implementation("com.google.dagger:dagger:2.40.5")
-    kapt("com.google.dagger:dagger-compiler:2.40.5")
+    implementation("com.google.dagger:dagger:2.45")
+    kapt("com.google.dagger:dagger-compiler:2.45")
 
     // Kotlin Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
+
 
     implementation("androidx.core:core-ktx:1.8.0")
     implementation("androidx.appcompat:appcompat:1.4.2")

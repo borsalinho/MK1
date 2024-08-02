@@ -14,7 +14,10 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/data" />
             <option value="$PROJECT_DIR$/domain" />
+            <option value="$PROJECT_DIR$/features" />
+            <option value="$PROJECT_DIR$/features/products-main" />
             <option value="$PROJECT_DIR$/productsapi" />
+            <option value="$PROJECT_DIR$/productsdatabase" />
           </set>
         </option>
       </GradleProjectSettings>
